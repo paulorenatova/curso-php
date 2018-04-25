@@ -1,8 +1,12 @@
 # Curso de PHP - com Tiago Gouvêa
 
+## Instalações
+- Instalação do GIT + git bash
+- Autenticar antes de dar git init e tal
+- PHP Storm - link da licença
 
-Instalação do GIT + git bash
-	Autenticar antes de dar git init e tal
+- XAMPP ou WAMPP
+- Alternativas ao XAMPP : https://alternativeto.net/software/xampp/
 
 
 Material de estudo
@@ -19,11 +23,13 @@ Fontes de atualização
 
 Ferramentas que usaremos
 
+- git
+- [PHP Storm - IDE](https://www.jetbrains.com/phpstorm/)
+- XAMPP
 - [Composer](https://getcomposer.org/)
 - [PDO](http://php.net/manual/pt_BR/book.pdo.php)
 - [MySql]()
 - [Slim](http://www.slimframework.com/) 
-- [CakePHP](https://cakephp.org/)
 - Bootstrap
 - jQuery
 - PDO
@@ -37,6 +43,9 @@ Programação
 ## Introdução ao PHP
 
 - Servidores: apache, PHP, MySql, [Servidor Embutido PHP](http://php.net/manual/pt_BR/features.commandline.webserver.php), PHP Cli
+- Document root
+
+
 - O PHP e o HTML
 - Hello World
 - Variáveis
