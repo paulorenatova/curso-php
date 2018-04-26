@@ -1,51 +1,52 @@
 # Curso de PHP - com Tiago Gouvêa
 
+
+
 ## Instalações
-- Instalação do GIT + git bash
-- Autenticar antes de dar git init e tal
-- PHP Storm - link da licença
 
-- XAMPP ou WAMPP
-- Alternativas ao XAMPP : https://alternativeto.net/software/xampp/
+Para começarmos precisamos instalar três coisas: o git, uma IDE e um pacote com os servidores:
 
+- [GitHub desktop](https://desktop.github.com/) - Versão para windows do github. Ou [Git Bash](https://git-scm.com/downloads) - Terminal estilo linxu (se você quiser usar o terminal).
+- [PHP Storm](https://www.jetbrains.com/phpstorm/) - IDE
+- [XAMPP](https://www.apachefriends.org/pt_br/index.html) ou [WAMPP](http://www.wampserver.com/en/) - Pacote de servidores
 
-Material de estudo
+Com isso instalado já podemos começar a programar.
+
+## Material de estudo
 
 -  [PHP Certification Study Guide](http://www.zend.com/en/services/certification/php-certification-study-guide), livro oficial da Zend que pode ser comprado por U$19,95. É o melhor material na minha opinião.
 - [PHP do jeito certo](http://br.phptherightway.com/) guia online com boas práticas.
 - [PHP Notes for Professionals](http://book.goalkicker.com/PHPBook/) - livro super detalhado de PHP;
 
-
-Fontes de atualização
+### Fontes de atualização
 
 - [A Semana PHP](https://www.getrevue.co/profile/asemanaphp
 ) - feed semanal de conteúdos relevantes sobre PHP.
 
-Ferramentas que usaremos
+## Ferramentas que usaremos no treinamento
 
-- git
-- [PHP Storm - IDE](https://www.jetbrains.com/phpstorm/)
-- XAMPP
 - [Composer](https://getcomposer.org/)
 - [PDO](http://php.net/manual/pt_BR/book.pdo.php)
-- [MySql]()
+- [MySql](https://www.mysql.com/)
 - [Slim](http://www.slimframework.com/) 
-- Bootstrap
-- jQuery
-- PDO
+- [Bootstrap](https://getbootstrap.com/)
+- [jQuery](https://jquery.com/)
 
-Acesso aos projetos em tempo real > https://floobits.com/TiagoGouvea/
+# Conteúdo 
 
-Programação
+## Aula 1
 
-# Aula 1
+### Introdução ao git, github
 
-## Introdução ao PHP
+Você pode usar o git de várias maneiras; com o Github Desktop, com outras ferramentas visuais de git tal como o [GitKraken](https://www.gitkraken.com/), através da própria IDE ou pela linha de comando, no dos ou git bash.
+
+- [O que é o GitHub na prática](https://www.youtube.com/watch?v=fG6gl9ne6CE) - Video em português explicando o git como um todo
+- [Tudo que você queria saber sobre Git e GitHub, mas tinha vergonha de perguntar](https://tableless.com.br/tudo-que-voce-queria-saber-sobre-git-e-github-mas-tinha-vergonha-de-perguntar/) - Post bem completo apresentando o git
+
+### Introdução ao PHP
 
 - Servidores: apache, PHP, MySql, [Servidor Embutido PHP](http://php.net/manual/pt_BR/features.commandline.webserver.php), PHP Cli
 - Document root
-
-
 - O PHP e o HTML
 - Hello World
 - Variáveis
@@ -64,9 +65,7 @@ Programação
 
 - Colocando tudo junto!
 
-## Introdução ao git, github
-
-## Definição do projeto de grupo
+### Definição do projeto de grupo
 
 - Desafio do Código - migração, parte visual, estrutura de dados
 - Lista de Hamburguerias
