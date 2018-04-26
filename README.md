@@ -42,6 +42,7 @@ Você pode usar o git de várias maneiras; com o Github Desktop, com outras ferr
 
 - [O que é o GitHub na prática](https://www.youtube.com/watch?v=fG6gl9ne6CE) - Video em português explicando o git como um todo
 - [Tudo que você queria saber sobre Git e GitHub, mas tinha vergonha de perguntar](https://tableless.com.br/tudo-que-voce-queria-saber-sobre-git-e-github-mas-tinha-vergonha-de-perguntar/) - Post bem completo apresentando o git
+- [GitHub for noobs](https://www.youtube.com/watch?v=1h9_cB9mPT8&list=PLqGj3iMvMa4LFz8DZ0t-89twnelpT4Ilw) - Série com quatro vídeos que conta a origem do git e em seguida explica seu funcionamento em detalhes.
 
 ### Introdução ao PHP
 
