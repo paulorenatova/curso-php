@@ -1,3 +1,3 @@
 <?php
 
-    echo "funcoes";
+    echo "funçoes são importantes!";
