@@ -34,7 +34,7 @@ Com isso instalado já podemos começar a programar.
 
 # Conteúdo 
 
-## Aula 1
+## Aula 1 - Introdução ao PHP e GIT
 
 ### Introdução ao git, github
 
@@ -57,16 +57,17 @@ Você pode usar o git de várias maneiras; com o Github Desktop, com outras ferr
 - Escopos, globais e super globais
 - Operadores
 
-## Aula 2
+## Aula 2 - Loops e estruturas de controle
+
+- Arrays
 - Loops
 - Funções
 - Estruturas de controle
-- Arrays
 - Requisições
 
-## Aula 3
+## Aula 3 - Classes e Objetos
 
-Orientação a Objeto
+- Orientação a Objeto
 - Formulários HTML
 - Classes e objetos - estáticas, interface
 - Namespaces*
@@ -83,6 +84,8 @@ Orientação a Objeto
 #### Controller
 
 ## Adiante
+
+- Sessão
 
 ### Erros e exceções
 - Blocos protegidos
