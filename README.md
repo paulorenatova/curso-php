@@ -56,56 +56,50 @@ Você pode usar o git de várias maneiras; com o Github Desktop, com outras ferr
 - Tipos
 - Escopos, globais e super globais
 - Operadores
+
+## Aula 2
 - Loops
 - Funções
 - Estruturas de controle
 - Arrays
-- Blocos protegidos
 - Requisições
-- [Request](https://imasters.com.br/desenvolvimento/a-extensao-request-do-php-7/?trace=1519021197&source=single)
 
-- Colocando tudo junto!
-
-### Definição do projeto de grupo
-
-- Desafio do Código - migração, parte visual, estrutura de dados
-- Lista de Hamburguerias
-
-## Definição do projeto pessoal
+## Aula 3
 
 Orientação a Objeto
-
-# Aula 2
-
-#
+- Formulários HTML
 - Classes e objetos - estáticas, interface
 - Namespaces*
 - [Autoloader](http://php.net/autoload)
 - [Composer](https://getcomposer.org/)
 
-## MVC
-### Model
-### View
-#### Templates
+### Movel View Controller
+#### Model
+#### View
+##### Templates
 
 [Plates](http://platesphp.com/v3/simple-example/), Twig
 
-### Controller
+#### Controller
 
+## Adiante
 
-# Aula 3
+### Erros e exceções
+- Blocos protegidos
 
-## Erros e exceções
-- Formulários HTML
+### Requisições
+- [Request](https://imasters.com.br/desenvolvimento/a-extensao-request-do-php-7/?trace=1519021197&source=single)
+
+### Seguindo
+- [Manipulação de Datas](http://br.phptherightway.com/#data_e_horario) - [DateTime](https://www.devmedia.com.br/manipulando-datas-com-php/32966)
 - SQL
 - Sessões
 - API
 - Upload de arquivos
 - htaccess e url amigáveis
 
-# Aula 4
 
-## Servidores e Publicação
+### Servidores e Publicação
 
 [Heroku](https://www.heroku.com/php)
 
@@ -113,6 +107,4 @@ FTP
 Integração Contínua
 Virtualização - Vagrant, Docker
 
-# Aula 4
-
-# Aula 6
+# Aula 10
