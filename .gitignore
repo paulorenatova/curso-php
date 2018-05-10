@@ -1,4 +1,4 @@
 # Ignorar arquivos do PhpStorm
 .idea/
-
+/vendor/
 .DS_Store

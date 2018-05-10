@@ -70,9 +70,27 @@ Você pode usar o git de várias maneiras; com o Github Desktop, com outras ferr
 - Orientação a Objeto
 - Formulários HTML
 - Classes e objetos - estáticas, interface
-- Namespaces*
 - [Autoloader](http://php.net/autoload)
 - [Composer](https://getcomposer.org/)
+
+## Aula 4 - Classes e Objetos
+
+
+```
+    Fazer um CRUD (CReate Update Delete) 
+    - Listar os registros
+    - Incluir um registro
+    - Editar um registro
+    - Excluir um registro
+    * Usar bootstrap (pra ficar bonitinho)
+    * Usar PDO para banco de dados
+    * Usar classes
+    Tabela: Aluno
+    
+```
+
+
+- Namespaces*
 
 ### Movel View Controller
 #### Model

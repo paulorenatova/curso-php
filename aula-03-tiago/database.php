@@ -8,9 +8,9 @@ class Database
     {
 //        var_dump($configuracoes);
 //        echo "Eu existo!";
-
         try {
-            $this->pdo = new PDO("mysql:host=$configuracoes[host];dbname=$configuracoes[dbname]",
+            $this->pdo = new PDO(
+                "mysql:host=$configuracoes[host];dbname=$configuracoes[dbname]",
                 $configuracoes['user'], $configuracoes['pass']);
         } catch (Exception $e) {
             echo "Erro de conexão!<br>";
