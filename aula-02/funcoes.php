@@ -1,3 +1,8 @@
 <?php
 
-    echo "funcões";
+//Método
+
+
+
+
+//Função
