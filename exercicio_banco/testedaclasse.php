@@ -15,8 +15,6 @@
                 $p1 = new ContaBanco("0001");
                 $p2 = new ContaBanco("0002");
 
-                echo "<hr>";
-
                 //Abrindo Conta
                 $p1->abrirConta("CC");
                 $p1->setDono("Jubileu");
@@ -26,14 +24,20 @@
                 echo "<hr>";
 
                 // Depositando
-                $p1->depositar(300);
+                $p1->depositar(2000);
                 $p2->depositar(500);
 
                 echo "<hr>";
 
                 //Sacando
                 $p1->sacar(1000);
-                $p2->sacar(100);
+                $p2->sacar(10000);
+
+                echo "<hr>";
+
+                //Consulta saldo
+                echo $p1->getSaldo();
+                echo $p2->getSaldo();
 
                 echo "<hr>";
 

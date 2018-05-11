@@ -15,10 +15,13 @@ class ContaBanco
 
     //Métodos
 
-    public function ContaBanco()
+    public function __construct($numConta)
     {
+        $this->setNumConta($numConta);
         $this->saldo = 0;
         $this->status = false;
+
+        echo "Conta nº ".$numConta." criada com sucesso!<br>";
     }
 
     public function abrirConta($tipo)
@@ -39,11 +42,11 @@ class ContaBanco
             echo "Sua conta pode ser fechada!";
         }elseif ($this->saldo < 0){
             echo "Seu saldo é ".$this->saldo.", e por isso não podemos fechar sua conta. <br>";
-            echo "Por favor, depostite a quantia de R$ ".(0-$this->saldo)." para fechar sua conta.<br>";
+            echo "Por favor, depostite a quantia de R$ ".(0-$this->saldo)." para fechar sua conta.<br>";;
         }else {
-            echo "Seu saldo é ".$this->saldo.", e por isso n~;ao podemos fechar sua conta. <br>";
+            echo "Seu saldo é ".$this->saldo.", e por isso não podemos fechar sua conta. <br>";
             echo "Por favor, saque a quantia de R$ ".$this->saldo." para fechar sua conta.<br>";
-        }
+        };
     }
 
     public function depositar($valorDepositado)
@@ -51,9 +54,10 @@ class ContaBanco
         if ($this->status == True){
             $this->saldo = $this->saldo + $valorDepositado;
             $this->setSaldo($this->saldo);
+            echo "Depósito de R$ ".$valorDepositado." na conta de ".$this->dono.".<br>";
         }else{
             echo "Sua conta já foi encerrada! Assim, não você pode depositar";
-        }
+        };
     }
 
     public function sacar($valorSaque)
@@ -63,7 +67,7 @@ class ContaBanco
                 $this->saldo = $this->saldo - $valorSaque;
                 echo"Você sacou R$ ".$valorSaque . " e agora seu saldo é R$ ".$this->getSaldo() . ".<br>";
             }else {
-                echo "Seu saldo é de R$ ".$this->saldo." e por isso você não pode sacar. <br>";
+                echo "Seu saldo é de R$ ".$this->saldo." e por isso você não pode sacar R$ " .$valorSaque.". <br>";
             }
         }else {
             echo "Sua conta está fechada e por isso você não pode sacar.<br>";
@@ -72,9 +76,9 @@ class ContaBanco
 
     public function pagarMensal()
     {
-        if ($this->tipo == CC){
+        if ($this->tipo == "CC"){
             $vMensal = 12;
-        } else {
+        } else if ($this->tipo == "CP") {
             $vMensal = 20;
         }
         if($this->isStatus()){
@@ -120,7 +124,7 @@ class ContaBanco
         return $this->saldo;
     }
 
-    public function setSaldo(int $saldo)
+    public function setSaldo($saldo)
     {
         $this->saldo = $saldo;
     }
@@ -130,7 +134,7 @@ class ContaBanco
         return $this->status;
     }
 
-    public function setStatus(bool $status)
+    public function setStatus($status)
     {
         $this->status = $status;
     }

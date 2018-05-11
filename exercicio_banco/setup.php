@@ -9,7 +9,8 @@ require_once "_class/ContaBanco.php";
     $db->setUser("root");
     $db->setPass("");
 
-    print_r($db);
     echo "<pre>";
     var_dump($db);
     echo "</pre>";
+
+    ?>
