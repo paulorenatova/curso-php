@@ -11,4 +11,4 @@ $config = [
     "user" => "root",
     "pass" => "rut"
 ];
-$db = new Database($config);
+//$db = new Database($config);
