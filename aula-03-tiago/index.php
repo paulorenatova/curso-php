@@ -3,5 +3,5 @@
 require './vendor/autoload.php';
 
 require './classes.php';
-$faker = Faker\Factory::create();
+//$faker = Faker\Factory::create();
 

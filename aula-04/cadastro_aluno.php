@@ -1,3 +1,5 @@
+<pre>
+
 <?php
 require "database.php";
 
@@ -24,3 +26,5 @@ print_r($_POST);
 echo "<pre>";
 
 ?>
+
+    </pre>
