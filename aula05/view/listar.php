@@ -32,16 +32,16 @@
                 <?=$item->id?>
             </td>
             <td>
-                <?=$item->dono?>
+                <?=$item->getCliente()->nome?> - <?=$item->getCliente()->cpf?>
             </td>
             <td>
-                <?=$item->tipo?>
+                <?=$item->getTipo()?>
             </td>
             <td>
-                <?=$item->ativa?>
+                <?=$item->isAtiva()?>
             </td>
             <td>
-                <?=$item->saldo?>
+                <?=$item->getSaldo()?>
             </td>
         </tr>
         <?php

@@ -7,12 +7,6 @@
 
 </head>
 <body>
-    <nav>
-        <a href="view/abrirconta.php">Abrir Conta</a> |
-        <a href="fecharconta.php">Fechar Conta</a> |
-        <a href="depositar.php">Depositar</a> |
-        <a href="sacar.php">Sacar</a>
-    </nav>
-    <hr>
-</body>
-</html>
+<?php
+require "menu.php";
+

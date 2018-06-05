@@ -1,25 +1,17 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Cadastro de Cliente</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <?php
-    require "menu.php"
-    ?>
-
-</head>
-<body>
 <h4>Cadastro de Nova Conta</h4>
 <hr>
 <form method="post">
     <table>
         <tr>
             <td>
-                <label for id="cname">Nome: </label>
+                <label for id="cCliente">Cliente: </label>
             </td>
             <td>
-                <input type="text" name="tDono" id="cDono">
+                <select name="tCliente">
+                    <?php foreach ($clientes as $cliente): ?>
+                        <option value="<?=$cliente->id?>"><?=$cliente->nome?></option>
+                    <?php endforeach; ?>
+                </select>
             </td>
         </tr>
         <tr>
@@ -34,7 +26,3 @@
     </table>
     <input type="submit">
 </form>
-<hr>
-
-</body>
-</html>
