@@ -9,7 +9,7 @@
             <td>
                 <select name="tCliente">
                     <?php foreach ($clientes as $cliente): ?>
-                        <option value="<?=$cliente->id?>"><?=$cliente->nome?></option>
+                        <option value="<?=$cliente->getId()?>"><?=$cliente->getNome()?></option>
                     <?php endforeach; ?>
                 </select>
             </td>

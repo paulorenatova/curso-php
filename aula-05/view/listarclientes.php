@@ -1,4 +1,8 @@
-<table border="1">
+<?php
+/* @var $clientes Cliente[] */
+?>
+<h2>Lista de Clientes</h2>
+<table class="table">
     <tr>
         <td>
            ID
@@ -10,24 +14,65 @@
             CPF
         </td>
         <td>
+            Saldo CC
+        </td>
+        <td>
+            Saldo CP
+        </td>
+        <td>
             Endereço
+        </td>
+        <td>
+            Ações
         </td>
     </tr>
     <?php
-    foreach ($cliente as $item){
+    foreach ($clientes as $cliente){
+
+        $podeExcluir = $cliente->getSaldoCc()== 0 && $cliente->getSaldoCp() == 0;
+
+
+
+
         ?>
         <tr>
             <td>
-                <?=$item->id?>
+                <?=$cliente->getId()?>
             </td>
             <td>
-                <?=$item->nome?>
+                <?=$cliente->getNome()?>
             </td>
             <td>
-                <?=$item->cpf?>
+                <?=$cliente->getCpf()?>
             </td>
             <td>
-                <?=$item->endereco?>
+                <?=$cliente->getSaldoCc()?>
+            </td>
+            <td>
+                <?=$cliente->getSaldoCp()?>
+            </td>
+            <td>
+                <?=$cliente->getEndereco()?>
+            </td>
+            <td>
+
+                <a href="editarcliente/<?=$cliente->getId()?>" class="btn btn-primary btn-sm"
+
+                >Editar</a>
+
+                <a href="excluircliente/<?=$cliente->getId()?>" class="btn btn-primary btn-sm"
+
+                    <?php
+                    if (!$podeExcluir ){
+                        ?>
+                        onClick="(function(e) {
+                            e.preventDefault();
+                            alert('Esse cliente não pode ser excluído pois não tem saldo R$0,00');
+                        })(event)"
+                        <?php
+                    }
+                    ?>
+                >Excluir</a>
             </td>
         </tr>
         <?php

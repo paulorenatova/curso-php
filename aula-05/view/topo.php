@@ -7,6 +7,8 @@
 
 </head>
 <body>
+<h1>Banco Imaginário</h1>
+<hr>
 <?php
 require "menu.php";
 

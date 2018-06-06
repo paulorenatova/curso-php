@@ -7,26 +7,18 @@ $app = new \Slim\App($c);
 
 $app->get("/", function (\Slim\Http\Request $req, \Slim\Http\Response $res, $args = []){
     require "view/topo.php";
-    require "view/inicio.php";
-//    return $res->getBody()->write("ola");
 });
 
 $app->get('/listar',function (\Slim\Http\Request $req, \Slim\Http\Response $res, $args = []){
     $contas = Banco::getContas();
-//    var_dump($contas);
     require "view/topo.php";
-    require "view/inicio.php";
     require "view/listar.php";
-//    return $res->getBody()->write("ola");
 });
 
 $app->get('/novaconta',function (\Slim\Http\Request $req, \Slim\Http\Response $res, $args = []){
     $clientes = Banco::getClientes();
     require "view/topo.php";
-    require "view/inicio.php";
     require "view/abrirconta.php";
-//    echo "ola";
-//    return $res->getBody()->write("ola");
 });
 
 $app->post('/novaconta',function (\Slim\Http\Request $req, \Slim\Http\Response $res, $args = []) use($app){
@@ -38,29 +30,41 @@ $app->post('/novaconta',function (\Slim\Http\Request $req, \Slim\Http\Response $
 //Cliente
 
 $app->get('/listarclientes',function (\Slim\Http\Request $req, \Slim\Http\Response $res, $args = []){
-    $cliente = Banco::getClientes();
-//    var_dump($contas);
+    $clientes = Banco::getClientes();
     require "view/topo.php";
-    require "view/inicio.php";
     require "view/listarclientes.php";
-//    return $res->getBody()->write("ola");
 });
 
 $app->get('/novocliente',function (\Slim\Http\Request $req, \Slim\Http\Response $res, $args = []){
     require "view/topo.php";
-    require "view/inicio.php";
     require "view/novocliente.php";
-//    echo "ola";
-//    return $res->getBody()->write("ola");
+
 });
 $app->post('/novocliente',function (\Slim\Http\Request $req, \Slim\Http\Response $res, $args = []) use($app){
-//    var_dump($req->getParams());
+
     $cliente= new Cliente($_POST);
-    var_dump($cliente);
     return $res->withStatus(302)->withHeader("Location", 'listarclientes');
-    //    require "view/abrirconta.php";
-    //    echo "ola";
-    //    return $res->getBody()->write("ola");
+
+});
+
+$app->get('/editarcliente/{id}',function (\Slim\Http\Request $req, \Slim\Http\Response $res, $args = []){
+    $cliente=Banco::getCliente($args["id"]);
+    require "view/topo.php";
+    require "view/editarcliente.php";
+
+});
+
+$app->post('/editarcliente/{id}',function (\Slim\Http\Request $req, \Slim\Http\Response $res, $args = []) use($app){
+    $cliente=Banco::getCliente($args["id"]);
+    $cliente->updateCliente($args["id"],$_POST);
+
+    return $res->withStatus(302)->withHeader("Location", base_url.'/listarclientes');
+
+});
+
+$app->get('/excluircliente/{id}',function (\Slim\Http\Request $req, \Slim\Http\Response $res, $args = []){
+    $cliente=Banco::delCliente($args["id"]);
+    return $res->withStatus(302)->withHeader("Location", base_url.'/listarclientes');
 });
 
 $app->run();

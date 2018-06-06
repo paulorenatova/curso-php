@@ -1,8 +1,9 @@
 <?php
-require "_class/Banco.php";
 require_once "_class/ContaBanco.php";
 require "_class/Cliente.php";
+require "_class/Banco.php";
 
+define("base_url", "/curso-php/aula-05");
 // Conectar no banco de dados
 try {
     $db = new PDO(

@@ -41,7 +41,19 @@ class Banco
         $sth = $db->prepare($sql);
         $sth->execute();
 
-        $result = $sth->fetchAll(PDO::FETCH_CLASS,ContaBanco);
+        $result = $sth->fetchAll(PDO::FETCH_CLASS,"ContaBanco");
+        return $result;
+    }
+
+    static public function getContasCliente($idCliente){
+        global $db;
+        $sql = "select * from conta where id_cliente=:id_cliente order by id_cliente";
+        $sth = $db->prepare($sql);
+        $sth->bindParam(":id_cliente",$idCliente, PDO::PARAM_STR);
+
+        $sth->execute();
+
+        $result = $sth->fetchAll(PDO::FETCH_CLASS,"ContaBanco");
         return $result;
     }
 
@@ -51,9 +63,14 @@ class Banco
         $sth = $db->prepare($sql);
         $sth->execute();
 
-        $result = $sth->fetchAll(PDO::FETCH_OBJ);
+        $result = $sth->fetchAll(PDO::FETCH_CLASS, "Cliente");
         return $result;
     }
+
+    /**
+     * @param $idCliente
+     * @return Cliente
+     */
     static public function getCliente($idCliente){
         global $db;
         $sql = "select * from cliente where id = :id_cliente order by id";
@@ -61,8 +78,16 @@ class Banco
         $sth->bindParam(":id_cliente",$idCliente, PDO::PARAM_INT);
         $sth->execute();
 
-        $result = $sth->fetch(PDO::FETCH_OBJ);
-        return $result;
+        $result = $sth->fetchAll(PDO::FETCH_CLASS, "Cliente");
+        return $result[0];
+    }
+
+    static public function delCliente($idCliente){
+        global $db;
+        $sql = "delete from cliente where id = :id_cliente";
+        $sth = $db->prepare($sql);
+        $sth->bindParam(":id_cliente",$idCliente, PDO::PARAM_INT);
+        $sth->execute();
     }
 
 

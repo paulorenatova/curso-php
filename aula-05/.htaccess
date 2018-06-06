@@ -1,4 +1,4 @@
 RewriteEngine On
-RewriteBase /curso-php/aula05/
+RewriteBase /curso-php/aula-05/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]

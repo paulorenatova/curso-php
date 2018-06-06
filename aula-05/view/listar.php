@@ -32,7 +32,7 @@
                 <?=$item->id?>
             </td>
             <td>
-                <?=$item->getCliente()->nome?> - <?=$item->getCliente()->cpf?>
+                <?=$item->getCliente()->getNome()?> - <?=$item->getCliente()->getCpf()?>
             </td>
             <td>
                 <?=$item->getTipo()?>
