@@ -6,8 +6,8 @@ require_once "_class/ContaBanco.php";
 try {
     $db = new PDO(
         'mysql:dbname=banco;host=167.99.233.184',
-        'client',
-        'TiagoGouvea'
+        'curso-php-2018',
+        'TiagoGouveaPhp'
     );
 
     global $db;
